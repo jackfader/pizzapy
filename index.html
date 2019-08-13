@@ -1,28 +1,5 @@
 
 <!doctype html>
-
-<script> if ("serviceWorker" in navigator) {
-  // This is the "Offline copy of pages" service worker
-
-  // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-
-  // Check compatibility for the browser we're running this in
-
-  if (navigator.serviceWorker.controller) {
-    console.log("[PWA Builder] active service worker found, no need to register");
-  } else {
-    // Register the service worker
-    navigator.serviceWorker
-      .register("pwabuilder-sw.js", {
-        scope: "./"
-      })
-      .then(function (reg) {
-        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-      });
-  }
-}
-</script>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -30,7 +7,6 @@
     <meta name="description" content="A simple pizza pie calculator">
     <meta name="author" content="Jack Fader based on Bootstrap Cover template">
     <meta name="theme-color" content="#4285F4" />
-    <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="pizza.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -66,7 +42,7 @@
         </div>
         <p id = "setup" style="visibility:hidden">You will need: </p>
         <h2 type = "number" id="result"> </h2>
-        <p id="pizzalogo" style="visibility:hidden"> Find some pizza near you:  <a href= "https://www.google.com/search?q=pizza+near+me&oq=pizza+near+me" target="_blank" rel="noreferrer"> <img src="pizza.png" </p> </a>
+        <p id="pizzalogo" style="visibility:hidden"> Find some pizza near you:  <a href= "https://www.google.com/maps/search/pizza+near+me/" target="_blank" rel="noreferrer"> <img src="pizza.png" </p> </a>
 
       </main>
       <footer class="mastfoot mt-auto">
