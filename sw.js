@@ -3,7 +3,7 @@ self.addEventListener('install', function(e) {
    caches.open('PizzaPy').then(function(cache) {
      return cache.addAll([
        '/index.html',
-       '/Custom.css',
+       '/custom.css',
        '/manifest1.json',
        '/sw.js',
        '/browserconfig.xml',
