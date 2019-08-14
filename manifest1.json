@@ -1,8 +1,6 @@
 {
-    "name": "PizzaPy",
     "short_name": "PizzaPy",
-    "start_url": "index.html?utm_source=homescreen",
-    "scope" : "./",
+    "name": "PizzaPy",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,6 +13,7 @@
             "type": "image/png"
         }
     ],
+    "start_url": "index.html",
     "theme_color": "#4285f4",
     "background_color": "#4285f4",
     "display": "standalone"
