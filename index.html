@@ -2,14 +2,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61512718-2"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-61512718-2');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-61512718-2');
 </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -52,6 +52,7 @@
         </div>
         <p id = "setup" style="visibility:hidden">You will need: </p>
         <h2 type = "number" id="result"> </h2>
+        <p type = "number" id="result2"> </p>
         <p id="pizzalogo" style="visibility:hidden"> Find some pizza near you: click -->  <a href= "https://www.google.com/maps/search/pizza+near+me/" target="_blank" rel="noreferrer"> <img src="img/pizza.png" </p> </a>
 
       </main>
@@ -67,7 +68,15 @@
     <script type="text/javascript" language="javascript" charset="utf-8">
     function output(){
         var var1 = document.getElementById('var1').value;
+        if (var1 <= 0){
+        document.getElementById('result').innerHTML = "Ghosts don't need any pizza!" ;
+        document.getElementById('result2').innerHTML = "but we can still help you find some..." ;
+      }
+        else {
         document.getElementById('result').innerHTML = Math.ceil(( var1 *3) / 8) ;
+        document.getElementById('result2').innerHTML = "pizzas!" ;
+
+      }
         document.getElementById('setup').style.visibility="visible";
         document.getElementById('pizzalogo').style.visibility="visible";
     }
